@@ -1,0 +1,94 @@
+/* ===========================
+   ESTILOS PARA TABLET
+   =========================== */
+
+@media (min-width: 800px) {
+
+    #hamburguesa {
+        display: none;   /* Ya no se usa */
+    }
+
+    nav {
+        position: static;      /* ← ESTE ES EL ARREGLO */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+        background: #4B2E1E ;
+        left: 0;               /* ← Eliminar desbordamiento */
+    }
+
+    nav a {
+        font-size: 20px;
+        color: white;
+    }
+}
+
+
+    header img {
+        height: 200px;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+
+
+    /* Tablet */
+@media (max-width: 900px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móvil */
+@media (max-width: 500px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ===============================
+   EFECTO SUAVE GALERÍA (TABLET)
+   =============================== */
+
+.galeria-item img {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpTablet 0.9s ease-out forwards;
+}
+
+.galeria-item:nth-child(1) img { animation-delay: 0s; }
+.galeria-item:nth-child(2) img { animation-delay: 0.1s; }
+.galeria-item:nth-child(3) img { animation-delay: 0.2s; }
+.galeria-item:nth-child(4) img { animation-delay: 0.3s; }
+.galeria-item:nth-child(5) img { animation-delay: 0.4s; }
+.galeria-item:nth-child(6) img { animation-delay: 0.5s; }
+.galeria-item:nth-child(7) img { animation-delay: 0.6s; }
+.galeria-item:nth-child(8) img { animation-delay: 0.7s; }
+.galeria-item:nth-child(9) img { animation-delay: 0.8s; }
+
+@keyframes fadeInUpTablet {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}

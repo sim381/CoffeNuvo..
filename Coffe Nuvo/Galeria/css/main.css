@@ -1,0 +1,160 @@
+/* ===========================
+   ESTILOS PARA PC (DEFAULT)
+   =========================== */
+
+/* Fondo general */
+body {
+    margin: 0;
+    background-color: #F5E9D3;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor general */
+#contenedor {
+    width: 100%;
+}
+
+/* Imagen del header */
+header img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Botón hamburguesa oculto en PC */
+/* ==========================
+   TABLET Y PC
+   ========================== */
+
+@media (min-width: 800px) {
+
+    #hamburguesa {
+        display: none;   /* Ya no se usa */
+    }
+
+    nav {
+        position: static;      /* ← ESTE ES EL ARREGLO */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+        background:  #4B2E1E ;
+        left: 0;               /* ← Eliminar desbordamiento */
+    }
+
+    nav a {
+        font-size: 20px;
+        color: white;
+    }
+}
+
+
+
+/* ===========================
+   GALERÍA COFFE NUVO
+   =========================== */
+
+.galeria {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px 40px;
+}
+
+.galeria h2 {
+    text-align: center;
+    color: #4B2E1E;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.galeria-subtitulo {
+    text-align: center;
+    color: #7A5B47;
+    margin-bottom: 35px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.galeria-item {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: #e5d8c7; /* beige suave como placeholder */
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* Imágenes */
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXTO TEMPORAL PARA ESPACIOS VACÍOS */
+.galeria-item img[src=""] {
+    opacity: 0;
+}
+
+.galeria-item[src=""]::after {
+    content: "Foto aquí";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4B2E1E;
+}
+
+
+
+/* =============================
+   EFECTO SUAVE GALERÍA (PC)
+   ============================= */
+
+.galeria-item img {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUpPC 0.8s ease-out forwards;
+}
+
+.galeria-item:nth-child(1) img { animation-delay: 0s; }
+.galeria-item:nth-child(2) img { animation-delay: 0.1s; }
+.galeria-item:nth-child(3) img { animation-delay: 0.2s; }
+.galeria-item:nth-child(4) img { animation-delay: 0.3s; }
+.galeria-item:nth-child(5) img { animation-delay: 0.4s; }
+.galeria-item:nth-child(6) img { animation-delay: 0.5s; }
+.galeria-item:nth-child(7) img { animation-delay: 0.6s; }
+.galeria-item:nth-child(8) img { animation-delay: 0.7s; }
+.galeria-item:nth-child(9) img { animation-delay: 0.8s; }
+
+@keyframes fadeInUpPC {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}

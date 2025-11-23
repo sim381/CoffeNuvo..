@@ -1,0 +1,58 @@
+
+  header img {
+    display: block;        /* Permite centrar */
+    margin: 0 auto;        /* Centra horizontalmente */
+    width: 100%;           /* Ocupa todo el ancho disponible */
+    max-width: 1200px;     /* Evita que sea demasiado grande en pantallas grandes */
+    height: 220px;         /* La hace alargada horizontal */
+    object-fit: cover;     /* Ajusta sin deformar */
+    border-radius: 10px;   /* Opcional: borde redondeado */
+}
+
+        body {
+    background-color: #F5E9D3;
+}
+
+/* Botón hamburguesa visible solo en móvil */
+/* ==========================
+   MÓVIL (DEFAULT)
+   ========================== */
+
+#hamburguesa {
+    display: block;
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    background: #4E342E;
+    color: white;
+}
+
+nav {
+    position: absolute;
+    top: 60px;
+    left: -140px;          /* SE OCULTA */
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background:  #4B2E1E ;
+    transition: left 0.3s ease;
+}
+
+nav a {
+    font-size: 18px;
+    white-space: nowrap;
+    color: white;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+

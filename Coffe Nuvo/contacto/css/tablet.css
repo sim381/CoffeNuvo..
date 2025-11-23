@@ -1,0 +1,58 @@
+/* ===========================
+   ESTILOS PARA TABLET
+   =========================== */
+
+@media (min-width: 800px) {
+
+    #hamburguesa {
+        display: none;   /* Ya no se usa */
+    }
+
+    nav {
+        position: static;      /* ← ESTE ES EL ARREGLO */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+        background: #4B2E1E ;
+        left: 0;               /* ← Eliminar desbordamiento */
+    }
+
+    nav a {
+        font-size: 20px;
+        color: white;
+    }
+}
+
+
+    header img {
+        height: 200px;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+
+
+    @media (max-width: 700px) {
+    .contacto-contenedor {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contacto-item {
+        width: 90%;
+    }
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
